@@ -26,7 +26,7 @@ namespace CSE445_Group37_Assignment.Pages.TryIt
         {
             string username = TextBoxTestUser.Text.Trim();
             string encrypted = KBUtilities.EncryptString(TextBoxTestPassword.Text, secretKey);
-
+            
             JAServiceReference.JAServiceClient proxy = new JAServiceReference.JAServiceClient();
             bool registered = proxy.RegisterUser(username, encrypted);
 

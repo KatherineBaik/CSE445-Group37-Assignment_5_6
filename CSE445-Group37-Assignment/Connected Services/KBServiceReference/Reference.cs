@@ -8,45 +8,45 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CSE445_Group37_Assignment.KBServiceReference1 {
+namespace CSE445_Group37_Assignment.KBServiceReference {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="KBServiceReference1.KBService")]
-    public interface KBService {
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="KBServiceReference.IKBService")]
+    public interface IKBService {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/KBService/AuthenticateUser", ReplyAction="http://tempuri.org/KBService/AuthenticateUserResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IKBService/AuthenticateUser", ReplyAction="http://tempuri.org/IKBService/AuthenticateUserResponse")]
         bool AuthenticateUser(string username, string password);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/KBService/AuthenticateUser", ReplyAction="http://tempuri.org/KBService/AuthenticateUserResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IKBService/AuthenticateUser", ReplyAction="http://tempuri.org/IKBService/AuthenticateUserResponse")]
         System.Threading.Tasks.Task<bool> AuthenticateUserAsync(string username, string password);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/KBService/AuthenticateStaff", ReplyAction="http://tempuri.org/KBService/AuthenticateStaffResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IKBService/AuthenticateStaff", ReplyAction="http://tempuri.org/IKBService/AuthenticateStaffResponse")]
         bool AuthenticateStaff(string username, string password);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/KBService/AuthenticateStaff", ReplyAction="http://tempuri.org/KBService/AuthenticateStaffResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IKBService/AuthenticateStaff", ReplyAction="http://tempuri.org/IKBService/AuthenticateStaffResponse")]
         System.Threading.Tasks.Task<bool> AuthenticateStaffAsync(string username, string password);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/KBService/EncryptString", ReplyAction="http://tempuri.org/KBService/EncryptStringResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IKBService/EncryptString", ReplyAction="http://tempuri.org/IKBService/EncryptStringResponse")]
         string EncryptString(string input, string key);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/KBService/EncryptString", ReplyAction="http://tempuri.org/KBService/EncryptStringResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IKBService/EncryptString", ReplyAction="http://tempuri.org/IKBService/EncryptStringResponse")]
         System.Threading.Tasks.Task<string> EncryptStringAsync(string input, string key);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/KBService/DecryptString", ReplyAction="http://tempuri.org/KBService/DecryptStringResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IKBService/DecryptString", ReplyAction="http://tempuri.org/IKBService/DecryptStringResponse")]
         string DecryptString(string input, string key);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/KBService/DecryptString", ReplyAction="http://tempuri.org/KBService/DecryptStringResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IKBService/DecryptString", ReplyAction="http://tempuri.org/IKBService/DecryptStringResponse")]
         System.Threading.Tasks.Task<string> DecryptStringAsync(string input, string key);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface KBServiceChannel : CSE445_Group37_Assignment.KBServiceReference1.KBService, System.ServiceModel.IClientChannel {
+    public interface IKBServiceChannel : CSE445_Group37_Assignment.KBServiceReference.IKBService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class KBServiceClient : System.ServiceModel.ClientBase<CSE445_Group37_Assignment.KBServiceReference1.KBService>, CSE445_Group37_Assignment.KBServiceReference1.KBService {
+    public partial class KBServiceClient : System.ServiceModel.ClientBase<CSE445_Group37_Assignment.KBServiceReference.IKBService>, CSE445_Group37_Assignment.KBServiceReference.IKBService {
         
         public KBServiceClient() {
         }

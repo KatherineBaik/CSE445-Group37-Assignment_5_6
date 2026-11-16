@@ -30,7 +30,7 @@ namespace CSE445_Group37_Assignment.Pages
             // This reads that the users type on the field.
             string username = TextBoxUsername.Text.Trim();
             string password = TextBoxPassword.Text;
-
+            
             // This encrypts locally with the DLL
             string encrypted = KBUtilities.EncryptString(password, secretKey);
 
@@ -39,7 +39,7 @@ namespace CSE445_Group37_Assignment.Pages
             bool registered = proxy.RegisterUser(username, encrypted);
             // TODO: if false, show LabelUserExists and return
             // TODO: if true, save the username in a cookie
-            // TODO: redirect to LoginPage.aspx
+            // TODO: redirect to LoginPage.aspx 
         }
     }
 }

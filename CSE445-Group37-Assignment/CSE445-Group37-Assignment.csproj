@@ -1,5 +1,4 @@
 ﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -47,8 +46,8 @@
     <Reference Include="CSE445-KBUtilities">
       <HintPath>..\..\CSE445-KBUtilities\CSE445-KBUtilities\bin\Debug\CSE445-KBUtilities.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\lib\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Runtime.Serialization" />
@@ -71,10 +70,24 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\KBServiceReference1\KBService.disco" />
-    <None Include="Connected Services\KBServiceReference1\configuration91.svcinfo" />
-    <None Include="Connected Services\KBServiceReference1\configuration.svcinfo" />
-    <None Include="Connected Services\KBServiceReference1\Reference.svcmap">
+    <None Include="Connected Services\JAServiceReference\JAService.wsdl" />
+    <None Include="Connected Services\JAServiceReference\JAService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\JAServiceReference\JAService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\KBServiceReference\KBService.disco" />
+    <None Include="Connected Services\KBServiceReference\configuration91.svcinfo" />
+    <None Include="Connected Services\KBServiceReference\configuration.svcinfo" />
+    <None Include="Connected Services\KBServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\JAServiceReference\JAService.disco" />
+    <None Include="Connected Services\JAServiceReference\configuration91.svcinfo" />
+    <None Include="Connected Services\JAServiceReference\configuration.svcinfo" />
+    <None Include="Connected Services\JAServiceReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -90,7 +103,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connected Services\KBServiceReference1\Reference.cs">
+    <Compile Include="Connected Services\JAServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\KBServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -131,7 +149,7 @@
       <DependentUpon>JA%27s TryIt.aspx</DependentUpon>
     </Compile>
     <Compile Include="Services\IJAService.cs" />
-    <Compile Include="Services\KBService.cs" />
+    <Compile Include="Services\IKBService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\KBService.svc.cs">
       <DependentUpon>KBService.svc</DependentUpon>
@@ -141,11 +159,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\KBServiceReference1\KBService.xsd">
+    <None Include="Connected Services\KBServiceReference\KBService.wsdl" />
+    <None Include="Connected Services\KBServiceReference\KBService.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\KBServiceReference1\KBService1.wsdl" />
-    <None Include="Connected Services\KBServiceReference1\KBService1.xsd">
+    <None Include="Connected Services\KBServiceReference\KBService1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
@@ -160,7 +178,8 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\KBServiceReference1\" />
+    <WCFMetadataStorage Include="Connected Services\JAServiceReference\" />
+    <WCFMetadataStorage Include="Connected Services\KBServiceReference\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -194,10 +213,11 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets'))" />
   </Target>
 </Project>

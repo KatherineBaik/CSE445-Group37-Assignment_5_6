@@ -18,8 +18,8 @@ namespace CSE445_Group37_Assignment.Pages.TryIt
         {
             string input = TextBoxEncrypt.Text;
             string key = TextBoxKey.Text;
-
-            KBServiceReference1.KBServiceClient proxy = new KBServiceReference1.KBServiceClient();
+            
+            KBServiceReference.KBServiceClient proxy = new KBServiceReference.KBServiceClient();
             string result = proxy.EncryptString(input, key);
 
             LabelEncryptResult.Text = result;
@@ -29,7 +29,7 @@ namespace CSE445_Group37_Assignment.Pages.TryIt
         {
             string input = TextBoxDecrypt.Text;
             string key = TextBoxKey.Text;
-            KBServiceReference1.KBServiceClient proxy = new KBServiceReference1.KBServiceClient();
+            KBServiceReference.KBServiceClient proxy = new KBServiceReference.KBServiceClient();
             string result = proxy.DecryptString(input, key);
 
             LabelDecryptResult.Text = result;
@@ -37,7 +37,7 @@ namespace CSE445_Group37_Assignment.Pages.TryIt
 
         protected void ButtonUserLogin_Click(object sender, EventArgs e)
         {
-            KBServiceReference1.KBServiceClient proxy = new KBServiceReference1.KBServiceClient();
+            KBServiceReference.KBServiceClient proxy = new KBServiceReference.KBServiceClient();
             bool result = proxy.AuthenticateUser(TextBoxUsername1.Text, TextBoxPassword1.Text);
 
             if (result)
@@ -52,7 +52,7 @@ namespace CSE445_Group37_Assignment.Pages.TryIt
 
         protected void ButtonStaffLogin_Click(object sender, EventArgs e)
         {
-            KBServiceReference1.KBServiceClient proxy = new KBServiceReference1.KBServiceClient();
+            KBServiceReference.KBServiceClient proxy = new KBServiceReference.KBServiceClient();
             bool result = proxy.AuthenticateStaff(TextBoxUsername2.Text, TextBoxPassword2.Text);
 
             if (result)
