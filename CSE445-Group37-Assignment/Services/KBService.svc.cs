@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using CSE445_KBUtilities;
 
-namespace CSE445_Group37_Assignment
+namespace CSE445_Group37_Assignment.Services
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in code, svc and config file together.
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
-    public class KBService1 : KBService
+    public class KBService : IKBService
     {
         // Work by: Katherine Baik
         // If the username and password match up with the database, returns session cookie
@@ -64,7 +64,7 @@ namespace CSE445_Group37_Assignment
         private const string secretKey = "YAHAHA";
 
         // Constructor to add user accounts
-        KBService1()
+        KBService()
         {
             UserAccounts = new Dictionary<string, string>();
             StaffAccounts = new Dictionary<string, string>();

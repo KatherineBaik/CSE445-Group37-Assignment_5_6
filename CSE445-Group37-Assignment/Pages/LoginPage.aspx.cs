@@ -17,7 +17,7 @@ namespace CSE445_Group37_Assignment.Pages
         // Work by: Katherine Baik
         protected void ButtonUserLogin_Click(object sender, EventArgs e)
         {
-            KBServiceReference1.KBServiceClient proxy = new KBServiceReference1.KBServiceClient();
+            KBServiceReference.KBServiceClient proxy = new KBServiceReference.KBServiceClient();
             bool result = proxy.AuthenticateUser(TextBoxUsername.Text, TextBoxPassword.Text);
 
             // if return true, set session cookie and redirect to next page
@@ -36,7 +36,7 @@ namespace CSE445_Group37_Assignment.Pages
         // Work by: Katherine Baik
         protected void ButtonStaffLogin_Click(object sender, EventArgs e)
         {
-            KBServiceReference1.KBServiceClient proxy = new KBServiceReference1.KBServiceClient();
+            KBServiceReference.KBServiceClient proxy = new KBServiceReference.KBServiceClient();
             bool result = proxy.AuthenticateStaff(TextBoxUsername.Text, TextBoxPassword.Text);
 
             // if return true, set session cookie and redirect to staff page

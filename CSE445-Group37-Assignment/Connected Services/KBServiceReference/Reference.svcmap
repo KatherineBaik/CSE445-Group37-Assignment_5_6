@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="73da6ccd-e807-458a-885d-659cb9bedf97" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="abe67180-feb4-46fc-bb5a-103e5418b533" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,10 +22,10 @@
     <MetadataSource Address="https://localhost:44360/Services/KBService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="KBService1.wsdl" MetadataType="Wsdl" ID="06f7d0a6-9415-435a-b0b7-8264343379fc" SourceId="1" SourceUrl="https://localhost:44360/Services/KBService.svc?wsdl" />
-    <MetadataFile FileName="KBService.xsd" MetadataType="Schema" ID="6c328da3-ec82-4bcd-90d1-17ccc9a152f0" SourceId="1" SourceUrl="https://localhost:44360/Services/KBService.svc?xsd=xsd1" />
-    <MetadataFile FileName="KBService1.xsd" MetadataType="Schema" ID="178e55ac-8c76-431f-91f7-cc34f982251c" SourceId="1" SourceUrl="https://localhost:44360/Services/KBService.svc?xsd=xsd0" />
-    <MetadataFile FileName="KBService.disco" MetadataType="Disco" ID="ba642323-b963-4c52-9cea-ad0b09e8616f" SourceId="1" SourceUrl="https://localhost:44360/Services/KBService.svc?disco" />
+    <MetadataFile FileName="KBService.xsd" MetadataType="Schema" ID="d1a5036e-fe74-4bda-9e6b-bf654ec320e2" SourceId="1" SourceUrl="http://localhost:52131/Services/KBService.svc?xsd=xsd1" />
+    <MetadataFile FileName="KBService1.xsd" MetadataType="Schema" ID="b5f81a33-2fe6-45e6-b94a-5845194f02d7" SourceId="1" SourceUrl="http://localhost:52131/Services/KBService.svc?xsd=xsd0" />
+    <MetadataFile FileName="KBService.disco" MetadataType="Disco" ID="e9238634-d895-4955-bdfc-e8712634dfbd" SourceId="1" SourceUrl="http://localhost:52131/Services/KBService.svc?disco" />
+    <MetadataFile FileName="KBService.wsdl" MetadataType="Wsdl" ID="1b4ce3a6-efe6-4451-949c-566197fad043" SourceId="1" SourceUrl="http://localhost:52131/Services/KBService.svc?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

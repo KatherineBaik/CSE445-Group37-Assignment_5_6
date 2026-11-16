@@ -1,11 +1,11 @@
 ﻿using System;
 using System.ServiceModel;
 
-namespace CSE445_Group37_Assignment
+namespace CSE445_Group37_Assignment.Services
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IService1" in both code and config file together.
     [ServiceContract]
-    public interface KBService
+    public interface IKBService
     {
         // Work by: Katherine Baik
         [OperationContract]

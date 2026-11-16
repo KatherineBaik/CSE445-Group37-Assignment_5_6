@@ -30,13 +30,14 @@ namespace CSE445_Group37_Assignment.Pages
             // This reads that the users type on the field.
             string username = TextBoxUsername.Text.Trim();
             string password = TextBoxPassword.Text;
-
+            
             // This encrypts locally with the DLL
             string encrypted = KBUtilities.EncryptString(password, secretKey);
 
             // This asks the JASerivce to create the account and returns a yes or no.
             JAServiceReference.JAServiceClient proxy = new JAServiceReference.JAServiceClient();
             bool registered = proxy.RegisterUser(username, encrypted);
+
 
             // This shows the warning message and terminates if any username is taken to keep users' username unique.
             if (!registered)
