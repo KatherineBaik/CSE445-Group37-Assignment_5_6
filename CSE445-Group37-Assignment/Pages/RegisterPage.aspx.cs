@@ -34,12 +34,24 @@ namespace CSE445_Group37_Assignment.Pages
             // This encrypts locally with the DLL
             string encrypted = KBUtilities.EncryptString(password, secretKey);
 
-            // This asks the JASerivce to create teh account and returns a yes or no.
+            // This asks the JASerivce to create the account and returns a yes or no.
             JAServiceReference.JAServiceClient proxy = new JAServiceReference.JAServiceClient();
             bool registered = proxy.RegisterUser(username, encrypted);
-            // TODO: if false, show LabelUserExists and return
-            // TODO: if true, save the username in a cookie
-            // TODO: redirect to LoginPage.aspx
+
+            // This shows the warning message and terminates if any username is taken to keep users' username unique.
+            if (!registered)
+            {
+                LabelUserExists.Visible = true;
+                return;
+            }
+
+            // This saves the username in a cookie for 7 days
+            HttpCookie cookie = new HttpCookie("RecipeBoxUser");
+            cookie["Username"] = username;
+            cookie.Expires = DateTime.Now.AddDays(7);
+            Response.Cookies.Add(cookie);
+            // This redirects to the login page.
+            Response.Redirect("LoginPage.aspx");
         }
     }
 }

@@ -1,6 +1,9 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="JATryIt.aspx.cs" Inherits="CSE445_Group37_Assignment.Pages.TryIt.JATryIt" %>
 <%@ Register Src="~/Controls/WelcomeUser.ascx" TagPrefix="uc" TagName="WelcomeUser" %>
 
+<%-- Work by: Josh Azura --%>
+<%-- This is the Try-It page and directory for my Assignment 5 components --%>
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -22,19 +25,19 @@
                     <td>Josh Azura</td><td>WCF service (SVC)</td><td>RegisterUser</td>
                     <td>string username, string encryptedPassword</td><td>bool</td>
                     <td>Creates a new account. Returns false if the username is empty or already taken.</td>
-                    <td>Section 1 below</td>
+                    <td>RegisterUser test below</td>
                 </tr>
                 <tr>
                     <td>Josh Azura</td><td>Cookie</td><td>RecipeBoxUser</td>
                     <td>key: Username (string)</td><td>-</td>
                     <td>Remembers the registered username for 7 days. Never stores the password.</td>
-                    <td>Section 2 below</td>
+                    <td>Cookie test below</td>
                 </tr>
                 <tr>
                     <td>Josh Azura</td><td>User control (ASCX)</td><td>WelcomeUser</td>
                     <td>none (reads the cookie)</td><td>-</td>
                     <td>Shows "Welcome back, name" when the cookie exists, otherwise "Welcome!".</td>
-                    <td>Section 3 below</td>
+                    <td>WelcomeUser test below</td>
                 </tr>
                 <tr>
                     <td>Josh Azura</td><td>ASPX page</td><td>RegisterPage</td>
@@ -44,14 +47,14 @@
                 </tr>
             </table>
 
-            <h3>1. RegisterUser service</h3>
+            <h3>RegisterUser service</h3>
             <p>Username: <asp:TextBox ID="TextBoxTestUser" runat="server"></asp:TextBox></p>
             <p>Password: <asp:TextBox ID="TextBoxTestPassword" runat="server" TextMode="Password"></asp:TextBox></p>
             <p><asp:Button ID="ButtonTestRegister" runat="server" Text="Try it" OnClick="ButtonTestRegister_Click" /></p>
             <p>Result: <asp:Label ID="LabelRegisterResult" runat="server"></asp:Label></p>
             <hr />
 
-            <h3>2. RecipeBoxUser cookie</h3>
+            <h3>RecipeBoxUser cookie</h3>
             <p>Name to save: <asp:TextBox ID="TextBoxCookieName" runat="server"></asp:TextBox></p>
             <p>
                 <asp:Button ID="ButtonSaveCookie" runat="server" Text="Save cookie" OnClick="ButtonSaveCookie_Click" />
@@ -61,7 +64,7 @@
             <p>Cookie value: <asp:Label ID="LabelCookieResult" runat="server"></asp:Label></p>
             <hr />
 
-            <h3>3. WelcomeUser user control</h3>
+            <h3>WelcomeUser user control</h3>
             <p>Save a cookie in section 2 and this greeting updates:</p>
             <uc:WelcomeUser ID="WelcomeUser1" runat="server" />
         </div>
