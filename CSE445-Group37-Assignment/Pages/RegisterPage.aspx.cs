@@ -37,6 +37,7 @@ namespace CSE445_Group37_Assignment.Pages
             // This asks the JASerivce to create the account and returns a yes or no.
             JAServiceReference.JAServiceClient proxy = new JAServiceReference.JAServiceClient();
             bool registered = proxy.RegisterUser(username, encrypted);
+            
 
 
             // This shows the warning message and terminates if any username is taken to keep users' username unique.

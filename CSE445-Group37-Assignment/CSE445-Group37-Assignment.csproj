@@ -44,7 +44,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CSE445-KBUtilities">
-      <HintPath>..\..\CSE445-KBUtilities\CSE445-KBUtilities\bin\Debug\CSE445-KBUtilities.dll</HintPath>
+      <HintPath>lib\KB_DLL\CSE445-KBUtilities.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\lib\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
@@ -180,6 +180,9 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\JAServiceReference\" />
     <WCFMetadataStorage Include="Connected Services\KBServiceReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Lib\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

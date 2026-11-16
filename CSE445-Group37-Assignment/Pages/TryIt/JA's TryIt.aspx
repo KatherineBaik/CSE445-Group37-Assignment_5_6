@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="JATryIt.aspx.cs" Inherits="CSE445_Group37_Assignment.Pages.TryIt.JATryIt" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="JA's TryIt.aspx.cs" Inherits="CSE445_Group37_Assignment.Pages.TryIt.JATryIt" %>
 <%@ Register Src="~/Controls/WelcomeUser.ascx" TagPrefix="uc" TagName="WelcomeUser" %>
 
 <%-- Work by: Josh Azura --%>

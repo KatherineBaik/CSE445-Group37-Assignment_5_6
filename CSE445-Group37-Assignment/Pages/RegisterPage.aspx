@@ -13,14 +13,14 @@
             <h2>Please register</h2>
             <hr/>
                 <p>Username: <asp:TextBox ID="TextBoxUsername" runat="server"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredUsername" runat="server" ControlToValidate="TextBoxUsername" ErrorMessage="Username is required" ForeColor="Red" />
+                    <asp:RequiredFieldValidator ID="RequiredUsername" runat="server" ControlToValidate="TextBoxUsername" ErrorMessage="Username is required" ForeColor="Red" Display="Dynamic" />
                 </p>
                 <p>Password: <asp:TextBox ID="TextBoxPassword" runat="server" TextMode="Password"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredPassword" runat="server" ControlToValidate="TextBoxPassword" ErrorMessage="Password is required" ForeColor="Red" />
+                    <asp:RequiredFieldValidator ID="RequiredPassword" runat="server" ControlToValidate="TextBoxPassword" ErrorMessage="Password is required" ForeColor="Red" Display="Dynamic" />
                 </p>
                 <p>Retype Password: <asp:TextBox ID="TextBoxConfirmPassword" runat="server" TextMode="Password"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredConfirmPassword" runat="server" ControlToValidate="TextBoxConfirmPassword" ErrorMessage="Please retype your password" ForeColor="Red" />
-                    <asp:CompareValidator ID="ComparePasswords" runat="server" ControlToValidate="TextBoxConfirmPassword" ControlToCompare="TextBoxPassword" ErrorMessage="Passwords don't match" ForeColor="Red" />
+                    <asp:RequiredFieldValidator ID="RequiredConfirmPassword" runat="server" ControlToValidate="TextBoxConfirmPassword" ErrorMessage="Please retype your password" ForeColor="Red" Display="Dynamic" />
+                    <asp:CompareValidator ID="ComparePasswords" runat="server" ControlToValidate="TextBoxConfirmPassword" ControlToCompare="TextBoxPassword" ErrorMessage="Passwords don't match" ForeColor="Red" Display="Dynamic" />
                 </p>
                 
                 <p><asp:Button ID="ButtonUserRegister" runat="server" Text="Register" OnClick="ButtonUserRegister_Click" /></p>
