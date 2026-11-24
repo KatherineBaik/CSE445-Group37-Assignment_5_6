@@ -70,6 +70,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Member.xml" />
     <None Include="Connected Services\JAServiceReference\JAService.wsdl" />
     <None Include="Connected Services\JAServiceReference\JAService.xsd">
       <SubType>Designer</SubType>
@@ -93,8 +94,10 @@
     </None>
     <Content Include="Controls\WelcomeUser.ascx" />
     <Content Include="Pages\CSS\LoginPage.css" />
+    <Content Include="Pages\CSS\Recipe.css" />
     <Content Include="Pages\CSS\RegisterPage.css" />
     <Content Include="Pages\LoginPage.aspx" />
+    <Content Include="Pages\Recipe.aspx" />
     <Content Include="Pages\TryIt\KB%27s TryIt.aspx" />
     <Content Include="Pages\RegisterPage.aspx" />
     <Content Include="Pages\TryIt\JA%27s TryIt.aspx" />
@@ -126,6 +129,13 @@
     </Compile>
     <Compile Include="Pages\LoginPage.aspx.designer.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Recipe.aspx.cs">
+      <DependentUpon>Recipe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Recipe.aspx.designer.cs">
+      <DependentUpon>Recipe.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\TryIt\KB%27s TryIt.aspx.cs">
       <DependentUpon>KB%27s TryIt.aspx</DependentUpon>

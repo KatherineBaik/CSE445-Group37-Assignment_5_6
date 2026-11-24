@@ -1,0 +1,9 @@
+﻿body {
+    text-align: center;
+}
+
+.table {
+    display: flex;
+    justify-content: center;
+    border-width: 0;
+}

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Members>
+	<Member>
+		<Username>user1</Username>
+		<Password>KSA7Mj8uKyU=</Password>
+		<Recipes>
+			<Recipe>
+				<Name>Apple pie</Name>
+				<Rating>5/5</Rating>
+				<Ingredients>
+					<Ingredient amount="some amount">Butter</Ingredient>
+					<Ingredient amount="some amount">Flour</Ingredient>
+				</Ingredients>
+				<Instructions>
+					Lots of text here, woaaaaah...
+				</Instructions>
+			</Recipe>
+			<Recipe>
+				<Name>Pumpkin pie</Name>
+				<Rating>5/5</Rating>
+				<Ingredients>
+					<Ingredient amount="some amount">Butter</Ingredient>
+					<Ingredient amount="some amount">Flour</Ingredient>
+				</Ingredients>
+				<Instructions>
+					
+				</Instructions>
+			</Recipe>
+		</Recipes>
+	</Member>
+	<Member>
+		<Username>user2</Username>
+		<Password>MC0hKi0iMSgrKi0vNzQvJi01Kg==</Password>
+		<Recipes>
+			<Recipe>
+				<Name>Blueberry pie</Name>
+				<Rating>5/5</Rating>
+				<Ingredients>
+					<Ingredient amount="some amount">Butter</Ingredient>
+					<Ingredient amount="some amount">Flour</Ingredient>
+				</Ingredients>
+				<Instructions>
+					Lots of text here, woaaaaah...
+				</Instructions>
+			</Recipe>
+		</Recipes>
+	</Member>
+	<Member>
+		<Username>user3</Username>
+		<Password>OCMrcHpy</Password>
+		<Recipes>
+			
+		</Recipes>
+	</Member>
+</Members>
